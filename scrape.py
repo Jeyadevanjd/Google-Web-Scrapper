@@ -2,7 +2,7 @@ from selenium import webdriver
 def search(query):
     op = webdriver.ChromeOptions()
     op.add_argument('headless')
-    a = webdriver.Chrome("  your chromedriver or any other webdriver for your webbrowser  ",options=op)
+    a = webdriver.Chrome("  Location to your chromedriver or any other webdriver for your webbrowser  ",options=op)
     a.get("https://www.google.com/search?q="+query.lower())
     try:
         data = a.find_element_by_xpath('//*[@id="kx"]/div/div/div')
